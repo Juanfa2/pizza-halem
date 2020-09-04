@@ -16,6 +16,8 @@ body{
 
 ul {
 	text-align: right;
+	list-style:none;
+
 }
 
 .link{
