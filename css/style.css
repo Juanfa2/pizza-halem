@@ -6,9 +6,7 @@ body{
 	margin-right: 80px;
 }
 
-/*
-	HEADER
-*/
+/*----------------------------------HEADER-----------------------------------------------*/
 
 .bg-br{
 	/*#e35656*/
@@ -92,18 +90,39 @@ p{
 .float-left{
 	float: left
 }
-/*
-	FOOTER
-*/
+
+input:focus{
+	background-color:  #EEEEEE;
+}
+
+button{
+	box-sizing: border-box;
+	padding: 5px;
+	background-color:#2278a9 ;
+	border:0;
+	color: white;
+}
+
+button:active{
+	background-color: green;
+}
+button:hover{
+	background-color: green;
+}
+[type="reset"]:active{
+	background-color: red;
+}
+[type="reset"]:hover{
+	background-color: red;
+}
+/*----------------------------FOOTER--------------------------------*/
 
 footer{
 
 	 padding: 10px;
 }
 
-/*
-	TABLE
-*/
+/*----------------------------TABLE---------------------------------*/
 table{
 	margin: 0 auto;
 	border-collapse: collapse;
@@ -131,12 +150,12 @@ caption{
 	background-color: #EEEEEE;
 }
 
-/*
-	.block-center{
+
+.block-center{
 	display: flex; 
 	justify-content: center;
 }
-*/
+
 
 
 .block-table{
@@ -150,16 +169,12 @@ caption{
 .td-line{
 	border-right: 1px solid red;
 }
-/*
-	MAPS
-*/
+/*------------------------------------MAPS-------------------------------------*/
 .content-center{
 	justify-content:center
 }
 
-/*
-	ABOUT
-*/
+/*----------------------------------ABOUT---------------------------------------*/
 
 .inline-block{
 	display: inline-block;
@@ -169,10 +184,28 @@ caption{
 	text-align: center;
 }
 
+.form{
+	box-sizing: border-box;
+	 margin: 0 auto; 
+	 max-width: 50%; 
+}
+
+/*-------------------------MEDIA QUERY------------------------------------*/
 @media only screen and (max-width: 768px) {
  	body{
 		max-width: 100%;
 		margin-left: 2px; 
 		margin-right: 2px;
 	}
+
+	.form{
+		box-sizing: border-box;
+	 margin: 0 auto; 
+	 max-width: 100%; 
+	}
+	.block-center{
+		display: block; 
+		
+	}
 }
+
