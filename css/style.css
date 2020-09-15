@@ -1,11 +1,12 @@
 *{
 	box-sizing: border-box;
 }
-body{
-	margin-left: 80px; 
-	margin-right: 80px;
-}
 
+body{
+		max-width: 100%;
+		margin-left: 10px; 
+		margin-right: 10px;
+	}
 /*----------------------------------HEADER-----------------------------------------------*/
 
 .bg-br{
@@ -17,22 +18,22 @@ body{
 }
 
 ul {
-	text-align: right;
+	padding: 0px;
 	list-style:none;
 
 }
 
 .link{
-	display: inline-block; 
+	/*display: inline-block;*/ 
 	margin-top: 10px; 
 	margin-right: 5px; 
 	/*background-color: rgb(233, 177, 65 ); */
 	padding: 5px; 
-	
-
-}
-.link:hover{
 	background-color: #E5E5E5 ;
+}
+
+.link:hover{
+	background-color: rgb(233, 177, 65 );
 
 }
 .link a {
@@ -77,15 +78,11 @@ p{
 
 
 }
-/*
 	.header-style{
-	overflow: hidden; 
-	box-sizing: border-box; 
-	position: sticky; 
-	top: 0;
+		padding: 20px;
 }
 
-*/
+
 
 .float-left{
 	float: left
@@ -184,28 +181,201 @@ caption{
 	text-align: center;
 }
 
+
+
 .form{
-	box-sizing: border-box;
-	 margin: 0 auto; 
-	 max-width: 50%; 
-}
+		box-sizing: border-box;
+	 	margin: 0 auto; 
+	 	max-width: 100%; 
+	}
 
 /*-------------------------MEDIA QUERY------------------------------------*/
-@media only screen and (max-width: 768px) {
- 	body{
-		max-width: 100%;
-		margin-left: 2px; 
-		margin-right: 2px;
+
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+[class*="col-"] {
+  float: left;
+  padding: 15px;
+}
+
+/* For mobile phones: */
+
+[class*="col-"] {
+  width: 100%;
+}
+
+
+@media only screen and (min-width: 600px) {
+  /* For tablets: */
+	.col-s-1 {width: 8.33%;}
+	.col-s-2 {width: 16.66%;}
+	.col-s-3 {width: 25%;}
+	.col-s-4 {width: 33.33%;}
+	.col-s-5 {width: 41.66%;}
+	.col-s-6 {width: 50%;}
+	.col-s-7 {width: 58.33%;}
+	.col-s-8 {width: 66.66%;}
+	.col-s-9 {width: 75%;}
+	.col-s-10 {width: 83.33%;}
+	.col-s-11 {width: 91.66%;}
+	.col-s-12 {width: 100%;}
+	body{
+		margin-left: 80px; 
+		margin-right: 80px;
+	}
+	.link{
+		display: inline-block; 	
+		background-color: white;
+	}
+	nav{
+		background-color: #EEEEEE   ; 
+		border-radius: 15px;
+		padding-bottom: 10px;
 	}
 
-	.form{
+}
+@media only screen and (min-width: 950px) {
+  /* For desktop: */
+	.col-1 {width: 8.33%;}
+	.col-2 {width: 16.66%;}
+	.col-3 {width: 25%;}
+	.col-4 {width: 33.33%;}
+	.col-5 {width: 41.66%;}
+	.col-6 {width: 50%;}
+	.col-7 {width: 58.33%;}
+	.col-8 {width: 66.66%;}
+	.col-9 {width: 75%;}
+	.col-10 {width: 83.33%;}
+	.col-11 {width: 91.66%;}
+	.col-12 {width: 100%;}
+  	.form{
 		box-sizing: border-box;
-	 margin: 0 auto; 
-	 max-width: 100%; 
+		margin: 0 auto; 
+		max-width: 50%; 
 	}
+	body{
+		margin-left: 80px; 
+		margin-right: 80px;
+	}
+	.link{
+		display: inline-block; 	
+		background-color: white;
+	}
+	nav{
+		background-color: #EEEEEE   ; 
+		border-radius: 15px;
+		padding-bottom: 10px;
+	}
+}
+
+
+/*
+@media only screen and (max-width: 768px) {
+ 	
+
+	
 	.block-center{
 		display: block; 
 		
 	}
+	 [class*="col-"] {
+    	width: 100%;
+
+
+  }
+}
+*/
+
+/*------------------------------------ANIMATION-------------------------------------------*/
+#animation-rotate {
+	animation: rotate 3s infinite;
+	animation-name: rotate;
+	animation-duration: 3s;
+	animation-timing-function: ease;
+	animation-delay: 0s;
+	animation-iteration-count: infinite;
+	animation-direction: alternate;
+	animation-fill-mode: none;
+	animation-play-state: running;
 }
 
+
+/*@keyframes rotate {
+0%, 100% {
+transform: rotate(360deg);
+}
+
+50% {
+transform: rotate(180deg);
+}
+*/
+/*
+@keyframes rotate {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(30deg); }
+  50% { transform: rotate(120deg); }
+  100% { transform: rotate(360deg); }
+}*/
+
+@keyframes rotate {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+
+
+#animate {
+animation: rotate 3s infinite;
+animation-name: move;
+animation-duration: 3s;
+animation-timing-function: ease;
+animation-delay: 0s;
+animation-iteration-count: infinite;
+animation-direction: normal;
+animation-fill-mode: none;
+animation-play-state: running;
+}
+
+@keyframes move {
+	from{transform: translate(0px);}
+	to{transform: translate(100px);}
+	/*
+  50% {
+     transform: translate(100px);
+  }*/
+}
+
+
+
+
+.animated {
+ -webkit-animation-duration: 2s;
+ animation-duration: 10s;
+ -webkit-animation-fill-mode: both;
+ animation-fill-mode: both;
+}
+@-webkit-keyframes flash {
+ 0%, 50%, 100% {
+ opacity: 1;
+ }
+25%, 75% {
+ opacity: 0;
+ }
+}
+@keyframes flash {
+ 0%, 50%, 100% {
+ opacity: 1;
+ }
+25%, 75% {
+ opacity: 0;
+ }
+}
+.flash {
+ -webkit-animation-name: flash;
+ animation-name: flash;
+}
